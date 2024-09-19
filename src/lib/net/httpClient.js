@@ -3,7 +3,7 @@ import { stringify } from "qs";
 import { getTimeStamp, generateTokenSignature } from "../util/util.js";
 
 const CURRENT_VERSION = "0.1.21";
-const HEADER_USER_AGENT = `bni-nodejs-sdk/${CURRENT_VERSION}`;
+const HEADER_USER_AGENT = `bni-nodejs/${CURRENT_VERSION}`;
 
 class HttpClient {
   constructor() {

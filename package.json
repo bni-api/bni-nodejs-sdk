@@ -1,5 +1,5 @@
 {
-  "name": "bni-nodejs-sdk",
+  "name": "bni-nodejs",
   "version": "0.1.21",
   "description": "Official BNI API SDK for Node.js",
   "type": "module",
