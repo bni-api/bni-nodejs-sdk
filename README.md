@@ -9,17 +9,17 @@ Please visit [Digital Services](https://digitalservices.bni.co.id/en/) for more 
 ### 1.1 Using NPM
 
 ```
-npm install --save bni-nodejs
+npm install --save bni-nodejs-sdk
 ```
 
 ### 1.2 Manual Installation
 
-If you are not using NPM, you can clone or [download](https://github.com/bni-api/bni-nodejs/archive/refs/heads/main.zip) this repository.
+If you are not using NPM, you can clone or [download](https://github.com/bni-api/bni-nodejs-sdk/archive/refs/heads/main.zip) this repository.
 Then import from `index.js` file.
 
 ```javascript
-import { BNIClient } from "bni-nodejs";
-// const { BNIClient } = require('bni-nodejs'); // legacy way
+import { BNIClient } from "bni-nodejs-sdk";
+// const { BNIClient } = require('bni-nodejs-sdk'); // legacy way
 ```
 
 ## 2. Usage
@@ -41,8 +41,8 @@ Get your client key and server key from [Menu - Applications](https://digitalser
 Create API client object
 
 ```javascript
-import { BNIClient } from "bni-nodejs";
-// const { BNIClient } = require('bni-nodejs'); // legacy way
+import { BNIClient } from "bni-nodejs-sdk";
+// const { BNIClient } = require('bni-nodejs-sdk'); // legacy way
 
 // Create Core API instance
 const client = new BNIClient({
@@ -60,8 +60,8 @@ const client = new BNIClient({
 Create `One Gate Payment` class object
 
 ```javascript
-import { BNIClient, OneGatePayment } from "bni-nodejs";
-// const { BNIClient, OneGatePayment } = require('bni-nodejs'); // legacy way
+import { BNIClient, OneGatePayment } from "bni-nodejs-sdk";
+// const { BNIClient, OneGatePayment } = require('bni-nodejs-sdk'); // legacy way
 
 // Create Client instance
 const client = new BNIClient({
@@ -161,8 +161,8 @@ const getInterBankPayment = await ogp.getInterBankPayment({
 Create `Snap BI` class object
 
 ```javascript
-import { BNIClient, SnapBI } from "bni-nodejs";
-// const { BNIClient, SnapBI } = require('bni-nodejs'); // legacy way
+import { BNIClient, SnapBI } from "bni-nodejs-sdk";
+// const { BNIClient, SnapBI } = require('bni-nodejs-sdk'); // legacy way
 
 // Create Client instance
 const client = new BNIClient({
@@ -373,8 +373,8 @@ const transferInterBank = await snap.transferInterBank({
 Create `Rdl` class object
 
 ```javascript
-import { BNIClient, Rdl } from "bni-nodejs";
-// const { BNIClient, Rdl } = require('bni-nodejs'); // legacy way
+import { BNIClient, Rdl } from "bni-nodejs-sdk";
+// const { BNIClient, Rdl } = require('bni-nodejs-sdk'); // legacy way
 
 // Create Client instance
 const client = new BNIClient({
@@ -655,8 +655,8 @@ const faceRecognition = async () => {
 Create `Fintech Account Service (RDF)` class object
 ```javascript
 
-import { BNIClient, Rdf } from 'bni-nodejs';
-// const { BNIClient, Rdf } = require('bni-nodejs'); // legacy way
+import { BNIClient, Rdf } from 'bni-nodejs-sdk';
+// const { BNIClient, Rdf } = require('bni-nodejs-sdk'); // legacy way
 
 // Create Client instance
 const client = new BNIClient({
@@ -914,8 +914,8 @@ const paymentUsingInterbank = async () => {
 Create `RDN` class object
 ```javascript
 
-import { BNIClient, Rdn } from 'bni-nodejs';
-// const { BNIClient, Rdn } = require('bni-nodejs'); // legacy way
+import { BNIClient, Rdn } from 'bni-nodejs-sdk';
+// const { BNIClient, Rdn } = require('bni-nodejs-sdk'); // legacy way
 
 // Create Client instance
 const client = new BNIClient({
@@ -1209,8 +1209,8 @@ const paymentUsingInterbank = async () => {
 Create `Ecollection` class object
 ```javascript
 
-import { BNIClient, Ecollection } from 'bni-nodejs';
-// const { BNIClient, Ecollection } = require('bni-nodejs'); // legacy way
+import { BNIClient, Ecollection } from 'bni-nodejs-sdk';
+// const { BNIClient, Ecollection } = require('bni-nodejs-sdk'); // legacy way
 
 // Create Client instance
 const client = new BNIClient({
@@ -1279,8 +1279,8 @@ const updateBilling = await ecollection.updateBilling({
 Create `BNI Move` class object
 ```javascript
 
-import { BNIClient, BNIMove } from 'bni-nodejs';
-// const { BNIClient, BNIMove } = require('bni-nodejs'); // legacy way
+import { BNIClient, BNIMove } from 'bni-nodejs-sdk';
+// const { BNIClient, BNIMove } = require('bni-nodejs-sdk'); // legacy way
 
 // Create Client instance
 const client = new BNIClient({
