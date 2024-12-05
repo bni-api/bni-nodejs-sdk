@@ -242,6 +242,50 @@ class HttpClient {
       throw errorWithCause;
     }
   }
+
+  requestBniDirectV2(
+    options = {
+      method,
+      apiKey,
+      accessToken,
+      url,
+      data,
+      signature,
+      timestamp,
+      bniDirectKey
+    }
+  ) {
+    const headers = {
+      'content-type': 'application/json',
+      'user-agent': HEADER_USER_AGENT,
+      'x-api-key': options.apiKey,
+      'x-signature': options.signature,
+      'x-timestamp': options.timestamp,
+      'bnidirect-api-key': options.bniDirectKey,
+      Authorization: `Bearer ${options.accessToken}`
+    };
+    return new Promise(async (resolve, reject) => {
+      try {
+        const res = await this.httpClient({
+          method: options.method,
+          headers: headers,
+          url: options.url,
+          data: options.data
+        });
+        resolve(res.data);
+      } catch (err) {
+        const errorWithCause = new Error(`An error occurred while executing the API service: ${err.message}`);
+        errorWithCause.cause = {
+          errno: err.errno,
+          code: err.code,
+          syscall: err.syscall,
+          hostname: err.hostname,
+          data: err.response?.data // Adjust according to where the data is located in your error object
+        };
+        throw errorWithCause;
+      }
+    });
+  }
 }
 
 export default HttpClient;
