@@ -96,7 +96,10 @@ export const generateSignatureServiceSnapBI = (
   return gen_hmac;
 };
 export const randomNumber = () => {
-  const randomNumber = Math.floor(100000000 + Math.random() * 900000);
+  // Use the full 9-digit range so the random part of X-EXTERNAL-ID has enough
+  // entropy; `* 900000` only spanned 100000000-100899999 (~900k values), which
+  // risks duplicate X-EXTERNAL-ID values that the API rejects.
+  const randomNumber = Math.floor(100000000 + Math.random() * 900000000);
   const unixTimeStamp = Math.floor(Date.now() / 1000);
   return `${randomNumber}${unixTimeStamp}`;
 };
